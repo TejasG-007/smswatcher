@@ -1,7 +1,8 @@
 name: smswatcher
 description: "A Flutter plugin to listen to incoming SMS messages and fetch stored messages on Android devices. This plugin allows you to receive SMS updates in real-time and retrieve SMS history for various use cases."
 version: 0.0.1
-homepage:
+homepage: 'https://portfolio.tejasgprod.online'
+repository: 'https://github.com/TejasG-007/smswatcher'
 
 environment:
   sdk: ^3.5.4
