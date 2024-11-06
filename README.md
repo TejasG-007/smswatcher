@@ -103,7 +103,3 @@ For runtime permissions, consider using the `permission_handler` package.
 ## Issues & Contributing
 
 Please file issues or feature requests through GitHub issues. Contributions are welcome!
-
----
-
-This is ready to be copied and pasted into any text editor or markdown file. Let me know if there's anything else!
