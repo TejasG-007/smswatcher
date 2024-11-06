@@ -14,7 +14,7 @@ Add this to your `pubspec.yaml`:
 
 ```
 dependencies:
-  smswatcher: ^0.0.1
+  smswatcher: ^0.0.3
 ```
 
 Then, run the command:
