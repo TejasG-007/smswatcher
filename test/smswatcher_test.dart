@@ -45,8 +45,8 @@ void main() {
     expect(await smswatcherPlugin.getAllSMS(), [
       {"sender": "TejasGProduction", "body": "SMS Testing"}
     ]);
-    smswatcherPlugin.getStreamOfSMS().listen((data){
-      expect(data,{"sender": "TejasGProduction", "body": "SMS Testing"});
+    smswatcherPlugin.getStreamOfSMS().listen((data) {
+      expect(data, {"sender": "TejasGProduction", "body": "SMS Testing"});
     });
   });
 }

@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     Permission.sms.request();
   }
+
   @override
   void dispose() {
     _smsListenerPlugin.dispose();
@@ -33,7 +34,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           floatingActionButtonLocation:
-          FloatingActionButtonLocation.centerFloat,
+              FloatingActionButtonLocation.centerFloat,
           floatingActionButton: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -59,7 +60,8 @@ class _MyAppState extends State<MyApp> {
                     height: MediaQuery.of(context).size.height / 6,
                     child: Column(
                       children: [
-                        const Text("Listening to Latest Messages", style: TextStyle(fontWeight: FontWeight.bold)),
+                        const Text("Listening to Latest Messages",
+                            style: TextStyle(fontWeight: FontWeight.bold)),
                         StreamBuilder(
                           stream: _smsListenerPlugin.getStreamOfSMS(),
                           builder: (context, snap) => ListTile(
@@ -75,17 +77,21 @@ class _MyAppState extends State<MyApp> {
                     height: MediaQuery.of(context).size.height / 1,
                     child: Column(
                       children: [
-                        const Text("Listening to Latest Messages", style: TextStyle(fontWeight: FontWeight.bold)),
+                        const Text("Listening to Latest Messages",
+                            style: TextStyle(fontWeight: FontWeight.bold)),
                         FutureBuilder(
                           future: _smsListenerPlugin.getAllSMS(),
                           builder: (context, snap) {
-                            if (!snap.hasData) return const CircularProgressIndicator(); // Optional loading state
+                            if (!snap.hasData)
+                              return const CircularProgressIndicator(); // Optional loading state
                             return Expanded(
                               child: ListView.builder(
                                 itemCount: snap.data?.length ?? 0,
                                 itemBuilder: (context, index) => ListTile(
-                                  title: Text(snap.data?[index]["sender"] ?? "NA"),
-                                  subtitle: Text(snap.data?[index]["body"] ?? "NA"),
+                                  title:
+                                      Text(snap.data?[index]["sender"] ?? "NA"),
+                                  subtitle:
+                                      Text(snap.data?[index]["body"] ?? "NA"),
                                 ),
                               ),
                             );

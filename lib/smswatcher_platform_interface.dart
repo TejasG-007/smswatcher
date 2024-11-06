@@ -23,7 +23,7 @@ abstract class SmswatcherPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<List<Map<String,String>>?> fetchMessages() {
+  Future<List<Map<String, String>>?> fetchMessages() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
@@ -31,11 +31,11 @@ abstract class SmswatcherPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Stream<Map<String,String>> listenToNewSMS(){
+  Stream<Map<String, String>> listenToNewSMS() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<void> dispose(){
+  Future<void> dispose() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }

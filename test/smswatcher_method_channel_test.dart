@@ -9,20 +9,20 @@ void main() {
   const MethodChannel channel = MethodChannel('sms_listener');
 
   setUp(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
-        return Future.value(
-            [
-              {"sender": "TejasGProduction", "body": "SMS Testing"}
-            ]
-        );
+        return Future.value([
+          {"sender": "TejasGProduction", "body": "SMS Testing"}
+        ]);
       },
     );
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, null);
   });
 
   test('getAllSMS', () async {
